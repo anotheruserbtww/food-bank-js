@@ -46,7 +46,7 @@
         //     console.log('Se eliminó el usuario');
         // });
 
-        document.getElementById('form-create-users').addEventListener('submit', (event) => {
+        document.getElementById('form-create-product').addEventListener('submit', (event) => {
             event.preventDefault();
             console.log("submitted")
         });

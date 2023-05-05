@@ -15,7 +15,7 @@
     <div class="container">
         <div class="my-3">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-                <button type="button" class="btn btn-secondary">
+                <button type="button" class="btn btn-secondary" id="refresh-btn">
                     <i class="bi bi-arrow-clockwise"></i>
                 </button>
 

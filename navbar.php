@@ -1,42 +1,31 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbar">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        
-        <a class="nav-link active" aria-current="page" href="index.php">
-        <img src="images/icono.png" alt="Bank Food" style="width: 25px; height: 25px;">  
-        Inicio</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Nosotros
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Conócenos</a></li>
-          <li><a class="dropdown-item" href="#">¿Qué hacemos?</a></li>
-          <li><a class="dropdown-item" href="#">¿Como ayudarnos?</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Vincúlate
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Formas de donar</a></li>
-          <li><a class="dropdown-item" href="#">Voluntariado</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="">Contáctenos</a>
-      </li>
-    </ul>
-    <form class="ms-auto">
-    <a href="#">
-    <button class="btn btn-sm btn-outline-secondary" type="button">Registrese</button></a>
-      <button class="btn btn-outline-success me-2" type="button">Dona aquí</button>
-    </form>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php">
+      <img src="images/icono.png" alt="Bank Food" width="45" height="45">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">¿Qué hacemos?</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">¿Como ayudarnos?</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contáctenos</a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <button type="button" class="btn btn-bluish-gray me-2">Dona aquí</button>
+        <button type="button" class="btn btn-outline-bluish-gray" >Registrarse</button>
+      </form>
+    </div>
   </div>
 </nav>

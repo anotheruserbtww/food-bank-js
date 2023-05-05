@@ -1,4 +1,4 @@
-   <div class="modal fade" id="modal-edit-product" tabindex="-1" aria-labelledby="modal-edit-productLabel"
+         <div class="modal fade" id="modal-edit-product" tabindex="-1" aria-labelledby="modal-edit-productLabel"
             aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">

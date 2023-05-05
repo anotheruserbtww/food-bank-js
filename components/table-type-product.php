@@ -1,3 +1,4 @@
+
 <table class="table table-bordered table-hover table-type-product">
           <thead>
             <tr>

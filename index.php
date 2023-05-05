@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8">
 	<title>Bank food</title>
-	<!--agregamos el cdn de css -->
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-	<!-- el cdn de js -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="./assets/css/index.css">
+	
 </head>
 
 <body>
 	<header>
-		<?php include 'navbar-admin.php'; ?>
+	<?php include_once("./navbar.php"); ?>
 	</header>
 	<main>
 		<h1>Bank food</h1>
 		<p>
-			sexo
+
 		</p>
 		<p>
 		</p>
@@ -27,5 +27,5 @@
 		<?php include 'footer.php'; ?>
 	</footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

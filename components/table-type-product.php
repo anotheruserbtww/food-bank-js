@@ -7,18 +7,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Frutas</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Enlatados</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Secos</td>
-            </tr>
           </tbody>
             
         </table>

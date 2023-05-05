@@ -16,7 +16,7 @@
     <div class="row">
       <div class="col-md-6">
         <h2>PRODUCT_TYPE</h2>
-        <button type="button" class="btn btn-info mb-3 " data-bs-toggle="modal" data-bs-target="#modal-create-type-product">
+        <button  type="button" class="btn btn-info mb-3 " data-bs-toggle="modal" data-bs-target="#modal-create-type-product">
                     <i class="bi bi-plus"></i>
                 </button>
           <button type="button  " class="btn btn-secondary  mb-3">
@@ -32,7 +32,7 @@
         <button type="button" class="btn btn-info mb-3 " data-bs-toggle="modal" data-bs-target="#modal-create-product">
                     <i class="bi bi-plus"></i>
                 </button>
-          <button type="button  " class="btn btn-secondary  mb-3">
+          <button id= refresh-btn type="button  " class="btn btn-secondary  mb-3">
                     <i class="bi bi-arrow-clockwise"></i>
                 </button>
         <?php include_once("./components/table-product.php"); ?>
@@ -50,7 +50,7 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/users.js"></script>
+    
 </body>
 
 </html>

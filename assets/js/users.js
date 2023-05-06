@@ -6,10 +6,22 @@ if ([null, undefined].includes(getToken())) {
   }
 }
 
+const modal_edit = new bootstrap.Modal(getField("moda-edit-users"), {
+  keyboard: false,
+});
+
 const dataTableUsers = (rows) => {
   const table = $("#table-users").DataTable({
-    scrollY: 450,
+    dom:
+      "<'row'<'col-sm-12 col-md-3'l><'col-sm-12 col-md-5'B><'col-sm-12 col-md-4'f>>" +
+      "<'row'<'col-sm-12'tr>>" +
+      "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
     data: rows,
+    scrollY: "400px",
+    destroy: true,
+    language: {
+      url: "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json",
+    },
     columns: [
       { data: "idusers" },
       { data: "users_name" },
@@ -21,27 +33,21 @@ const dataTableUsers = (rows) => {
       { data: "users_phone" },
     ],
     createdRow: function (row, data, dataIndex) {
-      // $.each($('td', row), function(colIndex) {
-      //   if (colIndex == 1) {
-      //     $(this).attr('data-name', 'judet');
-      //     $(this).attr('class', 'judet');
-      //     $(this).attr('data-type', 'text');
-      //     $(this).attr('data-pk', data.job);
-      //   }
-      // });
+      row.role = "button";
+      row.addEventListener("click", () => modal_edit.show());
     },
   });
 
-  //En lazando botones de la tabla
-  // table.on("click", "#btnEdit", function () {
-  //   var data = table.row($(this).parents("tr")).data();
-  //   alert(data["name"]);
-  // });
+  // evento click a fila de la tabla
+  if (rows.length > 0) {
+    $("#table-users tbody").on("click", "tr", (e) => {
+      const data = table.row(e.currentTarget).data();
 
-  // table.on("click", "#btnDelete", function () {
-  //   var data = table.row($(this).parents("tr")).data();
-  //   alert(data["salary"]);
-  // });
+      if (![null, "", false, undefined].includes(data)) {
+        getField("users_name_e").value = data.users_name;
+      }
+    });
+  }
 };
 
 const readUsers = () => {
@@ -59,9 +65,16 @@ const readUsers = () => {
     });
 };
 
-document.getElementById("refresh-btn").addEventListener("click", () => {
-  console.log("click reload");
+getField("refresh-btn").addEventListener("click", () => {
+  readUsers();
 });
 
-console.log();
+getField("btn-delete-users").addEventListener("click", () => {
+  if (confirm("Está seguro de eliminar a este usuario?")) {
+    console.log("eliminado");
+    modal_edit.hide();
+    readUsers();
+  }
+});
+
 readUsers();

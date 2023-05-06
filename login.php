@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es" data-bs-theme="light">
 
 <head>
   <title>Bank food - Login</title>
@@ -17,7 +17,7 @@
 
   <div class="container-fluid">
     <div class="col-12 col-sm-9 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mx-auto my-5 rounded p-5 shadow">
-      <form>
+      <form id="form-login">
         <!-- <img
 						class="mb-4"
 						src="/docs/5.2/assets/brand/bootstrap-logo.svg"
@@ -39,7 +39,7 @@
           <input type="password" class="form-control" id="users_password" placeholder="Contraseña..." required />
         </div>
 
-        <button type="button" class="w-100 btn btn-bluish-gray btn-lg">
+        <button type="submit" class="w-100 btn btn-bluish-gray btn-lg">
           Ingresar
         </button>
 
@@ -49,7 +49,10 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/settings.js"></script>
+  <script src="./assets/js/login.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,10 @@
-let id = 1;
-const users = [
-  {
-    idusers: id,
-    users_name: "Sergio",
-    users_lastname: "Leon",
-    users_address: "Calle 13",
-    users_document: 1212,
-    users_document_types: "CEDULA CIUDADANIA",
-    users_email: "sergio@gmail.com",
-    users_phone: 3154498121,
-  },
-];
+if ([null, undefined].includes(getToken())) {
+  window.location.href = "login.php";
+} else {
+  if (![1, 2].includes(decode_jwt(getToken()).data.idroles)) {
+    window.location.href = "405.php";
+  }
+}
 
 const dataTableUsers = (rows) => {
   const table = $("#table-users").DataTable({
@@ -51,25 +45,23 @@ const dataTableUsers = (rows) => {
 };
 
 const readUsers = () => {
-  console.log("leyendo users");
-  dataTableUsers(users);
+  axios
+    .get(`${host}/api/admin/users/read`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + getToken(),
+      },
+    })
+    .then((res) => {
+      if (!res.data.status) {
+        dataTableUsers(res.data);
+      }
+    });
 };
 
 document.getElementById("refresh-btn").addEventListener("click", () => {
-  id++;
-
-  users.push({
-    idusers: id,
-    users_name: "Carlos",
-    users_lastname: "Guzman",
-    users_address: "Calle 13",
-    users_document: 1212,
-    users_document_types: "CEDULA CIUDADANIA",
-    users_email: "carlos@gmail.com",
-    users_phone: 3154498121,
-  });
-
-  readUsers(users);
+  console.log("click reload");
 });
 
+console.log();
 readUsers();

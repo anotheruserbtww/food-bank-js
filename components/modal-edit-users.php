@@ -26,27 +26,27 @@
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="users_lastname" class="form-label">Apellidos</label>
-                <input type="form-control" class="form-control" id="users_lastname" placeholder="Apellidos" required autocomplete="off">
+                <input type="form-control" class="form-control" id="users_lastname_e" placeholder="Apellidos" required autocomplete="off">
               </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="users_address" class="form-label">Direccion</label>
-                <input type="form-control" class="form-control" id="users_address" placeholder="Direccion" required autocomplete="off">
+                <input type="form-control" class="form-control" id="users_address_e" placeholder="Direccion" required autocomplete="off">
               </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="users_email" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="users_email" placeholder="Correo" required autocomplete="off">
+                <input type="email" class="form-control" id="users_email_e" placeholder="Correo" required autocomplete="off">
               </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
-                <select for="users_document_types" class="form-select" required autocomplete="off">
+                <select for="users_document_types" class="form-select_e" required autocomplete="off">
                   <option selected>Tipo de documento</option>
                   <option value="1">Cédula Ciudadana</option>
                   <option value="2">NIT</option>
@@ -58,21 +58,21 @@
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="users_document" class="form-label">Identificación</label>
-                <input type="form-control" class="form-control" id="users_document" placeholder="Identificacion" required autocomplete="off">
+                <input type="form-control" class="form-control" id="users_document_e" placeholder="Identificacion" required autocomplete="off">
               </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="users_phone" class="form-label">Número de Telefono</label>
-                <input type="form-control" class="form-control" id="users_phone" placeholder="Numero de Telefono" required autocomplete="off">
+                <input type="form-control" class="form-control" id="users_phone_e" placeholder="Numero de Telefono" required autocomplete="off">
               </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-6">
               <div class="mb-3">
                 <label for="idroles" class="form-label">Id Rol</label>
-                <input type="form-control" class="form-control" id="idroles" placeholder="Id Rol" required autocomplete="off">
+                <input type="form-control" class="form-control" id="idroles_e" placeholder="Id Rol" required autocomplete="off">
               </div>
             </div>
           </div>

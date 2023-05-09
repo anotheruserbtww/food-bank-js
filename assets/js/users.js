@@ -1,8 +1,9 @@
+
 if ([null, undefined].includes(getToken())) {
   window.location.href = "login.php";
-} else {
+ } else {
   if (![1, 2].includes(decode_jwt(getToken()).data.idroles)) {
-    window.location.href = "405.php";
+   window.location.href = "405.php";
   }
 }
 
@@ -45,6 +46,7 @@ const dataTableUsers = (rows) => {
 
       if (![null, "", false, undefined].includes(data)) {
         getField("users_name_e").value = data.users_name;
+        getField("users_lastname_e").value = data.users_lastname;
       }
     });
   }
